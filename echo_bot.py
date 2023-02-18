@@ -55,14 +55,14 @@ def handle_text_message(event):
             event.reply_token,
             [
                 #TextSendMessage(text="From: " + profile.display_name),
-                TextSendMessage(text=profile.display_name+"さんの運勢は"+fortune[i]+"です！")
+                TextSendMessage(text= "「 " + text + "」" + "というメッセージを頂きました！ところで" + profile.display_name+"さんの運勢は"+fortune[i]+"です！")
             ],
         )
     else:
         line_bot_api.reply_message(
             event.reply_token,
             [
-                TextSendMessage(text="あなたの運勢は"+fortune[i]+"です！")
+                TextSendMessage(text="「 " + text + "」" + "というメッセージを頂きました！ところで" + profile.display_name+"さんの運勢は"+fortune[i]+"です！")
             ]
         )
 
