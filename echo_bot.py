@@ -62,7 +62,7 @@ def handle_text_message(event):
         line_bot_api.reply_message(
             event.reply_token,
             [
-                TextSendMessage(text="Received message: " + text)
+                TextSendMessage(text="あなたの運勢は"+fortune[i]+"です！")
             ]
         )
 
